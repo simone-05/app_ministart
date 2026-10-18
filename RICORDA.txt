@@ -1,0 +1,6 @@
+se cambio dark/light theme del sistema del telefono:
+onCreate -> onResume
+ripetuto almeno 2 volte entrambi
+
+se vado nei settings o cambio app o sblocco lo schermo
+onResume

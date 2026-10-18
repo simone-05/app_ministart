@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Home Screen -->
+    <com.simonimal.ministart.ui.widgets.GestureInterceptLayout
+        android:id="@+id/homeScreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+        <!-- Clock layout -->
+        <LinearLayout
+            android:id="@+id/homeClockLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/clockTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clock"
+                android:textSize="60sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+        <!-- Apps layout -->
+        <LinearLayout
+            android:id="@+id/homeAppsLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp">
+            <!-- here are the apps' TextViews -->
+        </LinearLayout>
+
+    </com.simonimal.ministart.ui.widgets.GestureInterceptLayout>
+
+
+
+    <!-- App drawer card, fades in/out -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/appDrawerCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#33000000"
+        app:strokeWidth="0dp"
+        android:alpha="0"
+        >
+
+        <!-- App drawer layout, scrolls up/down -->
+        <com.simonimal.ministart.ui.widgets.NestedScrollGesture
+            android:id="@+id/appDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="70dp"
+            android:paddingBottom="0dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            >
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search apps..."
+                android:textSize="36sp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="22dp"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                />
+
+            <!-- Apps List (Scrollable) -->
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/appDrawerScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                >
+
+                <LinearLayout
+                    android:id="@+id/appDrawerAppsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.simonimal.ministart.ui.widgets.NestedScrollGesture>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#34d</color>
+    <color name="colorAccent">#34d</color>
+    <color name="colorBackground">#fcfcfc</color>
+
+    <color name="colorPrimaryNight">#56f</color>
+    <color name="colorAccentNight">#56f</color>
+    <color name="colorBackgroundNight">#121212</color>
+    <color name="clockThemedColor">#fcfcfc</color>
+    <color name="dateThemedColor">#fcfcfc</color>
+
+    <color name="blue">#34d</color>
+    <color name="red">#cc3022</color>
+    <color name="green">#3a3</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+
+    <color name="ic_launcher_background">#D14242</color>
+</resources>

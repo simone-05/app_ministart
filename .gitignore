@@ -1,0 +1,11 @@
+.gradle
+.kotlin
+.vscode
+/build
+/app/build
+/local.properties
+
+
+logcat.sh
+local.properties
+android_env_commands.sh
